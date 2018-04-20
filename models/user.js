@@ -8,12 +8,11 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING,
     alamat: DataTypes.STRING,
     jabatan: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  User.associate = function(models) {
+    models.Users.hasMany(models.Artikels);
+  };
+  
   return User;
 };

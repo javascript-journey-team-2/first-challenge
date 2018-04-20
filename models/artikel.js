@@ -6,12 +6,23 @@ module.exports = function(sequelize, DataTypes) {
     BahasaPemrogramanId: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER,
     sumber_artikel: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  Artikel.associate = function (models) {
+    // relasi dengan user
+    models.Artikels.belongsTo(models.Users, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
+    //relasi dengan Bahasa Pemrograman
+    models.Artikels.belongsTo(models.BahasaPemrogramans, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Artikel;
 };
