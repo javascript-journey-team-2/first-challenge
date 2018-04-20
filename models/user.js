@@ -13,6 +13,8 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     models.Users.hasMany(models.Artikels);
   };
-  
+
   return User;
 };
+
+
