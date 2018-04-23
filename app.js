@@ -39,7 +39,7 @@ app.use(methodOverride(function(req, res){
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/home', indexRouter);
 
 const port = process.env.PORT || 4000;
 
