@@ -2,13 +2,14 @@ doctype html
 html
     head
         include head.pug
-        body.hold-transition.login-page
+        body.hold-transition.register-page
                                 block content
 
 //- | !-- jQuery 3 --&gt;
 script(src='/adminlte/jquery/dist/jquery.min.js')|
 script(src='/adminlte/bootstrap/dist/js/bootstrap.min.js')|
 script(src='/adminlte/plugins/iCheck/icheck.min.js')|
+script(src='/adminlte/select2/dist/js/select2.full.min.js')|
 script.
   $(function () {
   $('input').iCheck({
@@ -16,5 +17,7 @@ script.
   radioClass: 'iradio_square-blue',
   increaseArea: '20%' /* optional */
   });
+  $('.select2').select2();
   });
+
 

@@ -8,15 +8,17 @@ block content
       .login-box-body
         p.login-box-msg Silakan Login
         form(action='#' method='post')
+          label Email
           .form-group.has-feedback
-            input.form-control(type='email' autocomplete='off' placeholder='Email')
+            input.form-control(type='email' autocomplete='off' placeholder='Isi Email')
             span.glyphicon.glyphicon-envelope.form-control-feedback
+          label Password
           .form-group.has-feedback
-            input.form-control(type='password' placeholder='Password' autocomplete='off')
+            input.form-control(type='password' placeholder='Isi Password' autocomplete='off')
             span.glyphicon.glyphicon-lock.form-control-feedback
           .social-auth-links.text-center
-            button.btn.btn-primary.btn-block.btn-flat(type='submit') Sign In
-          a.text-center(href='#') Register member baru ?
+            button.btn.btn-primary.btn-block.btn-flat(type='submit') Masuk
+          a.text-center(href='../register') Apakah anda sudah registrasi ?
       // /.login-box-body
     // /.login-box
 
